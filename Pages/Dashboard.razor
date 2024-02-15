@@ -1,0 +1,18 @@
+﻿@page "/"
+
+<PageTitle>Dashboard</PageTitle>
+
+<nav class="topNav">
+
+    <div class="brand">@accountName</div>
+    <div class="navItemContainer">
+        <div class="navItem">Nummerweergave</div>
+        <div class="navItem">Wachtmuziek</div>
+        <div class="navItem">Gespreksopname</div>
+        <div class="navItem">Openingstijden</div>
+    </div>
+</nav>
+
+@code {
+    private string accountName = "Cobbler kantoor";
+}

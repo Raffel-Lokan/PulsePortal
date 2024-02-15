@@ -1,0 +1,22 @@
+.topNav {
+    display: flex;
+    flex: auto;
+    background-color: #22a5ff;
+    color: white;
+    justify-content: space-between;
+}
+
+.brand {
+    font-size: larger;
+    padding: 10px 20px;
+}
+
+.navItem {
+    max-width: 12rem;
+    border: 1px solid white;
+    padding: 10px 20px;
+}
+
+.navItemContainer {
+    display: flex;
+}
