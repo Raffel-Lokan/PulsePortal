@@ -3,7 +3,6 @@
 <PageTitle>Dashboard</PageTitle>
 
 <nav class="topNav">
-
     <div class="brand">@accountName</div>
     <div class="navItemContainer">
         <div class="navItem">Nummerweergave</div>
@@ -13,6 +12,11 @@
     </div>
 </nav>
 
+<header class="header">
+    Aantal gebruikers: <span class="header-counter">@numberOfUsers</span>
+</header>
+
 @code {
     private string accountName = "Cobbler kantoor";
+    private int numberOfUsers = 25;
 }

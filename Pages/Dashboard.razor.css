@@ -4,19 +4,37 @@
     background-color: #22a5ff;
     color: white;
     justify-content: space-between;
+    margin-bottom: 1rem;
+    border-radius: 2px;
 }
 
 .brand {
+    display: flex;
+    width: 100%;
     font-size: larger;
+    border: 1px solid white;
     padding: 10px 20px;
 }
 
 .navItem {
-    max-width: 12rem;
     border: 1px solid white;
     padding: 10px 20px;
 }
 
 .navItemContainer {
     display: flex;
+}
+
+.header {
+    display: flex;
+    font-size: larger;
+    background-color: #f6f6f6;
+    max-width: 20rem;
+    justify-content: space-between;
+    padding: 15px 10px;
+    border-radius: 2px;
+}
+
+.header-counter {
+    color: #22a5ff;
 }
