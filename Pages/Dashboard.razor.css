@@ -25,16 +25,6 @@
     display: flex;
 }
 
-.header {
-    display: flex;
-    font-size: larger;
-    background-color: #f6f6f6;
-    max-width: 20rem;
-    justify-content: space-between;
-    padding: 15px 10px;
-    border-radius: 2px;
-}
-
-.header-counter {
-    color: #22a5ff;
+.marginSmall {
+    margin: 0 2px;
 }

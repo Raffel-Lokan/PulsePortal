@@ -1,0 +1,18 @@
+<div class="overviewStat @isMainStat ? mainStat">
+    <header class="header @isMainStat ? mainStat">
+        @headerName <span class="header-counter">@counter</span>
+    </header>
+    <div class="childComponents">
+        @childComponents
+    </div>
+</div>
+
+@code {
+    [Parameter] public int counter { get; set; }
+
+    [Parameter] public string? headerName { get; set; }
+
+    [Parameter] public RenderFragment? childComponents { get; set; }
+
+    [Parameter] public bool isMainStat { get; set; }
+}
