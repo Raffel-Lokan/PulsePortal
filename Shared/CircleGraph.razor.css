@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    width: 13rem;
+}
+
+.singleStat {
+    display: flex;
+    justify-content: space-between;
+}
