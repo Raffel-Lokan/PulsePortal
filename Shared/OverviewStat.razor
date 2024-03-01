@@ -1,14 +1,18 @@
-<div class="overviewStat @isMainStat ? mainStat">
-    <header class="header @isMainStat ? mainStat">
-        @headerName <span class="header-counter">@counter</span>
+<div class="overviewStat @(isMainStat ? "mainStat" : "")">
+    <header class="header @(isMainStat ? "mainStatHeader" : "")">
+        @headerName <span class="header-counter">@(int.TryParse(counter, out int headerCounter) ? headerCounter :
+            "-")</span>
     </header>
-    <div class="childComponents">
-        @childComponents
-    </div>
+    @if (childComponents is not null)
+    {
+        <div class="childComponents">
+            @childComponents
+        </div>
+    }
 </div>
 
 @code {
-    [Parameter] public int counter { get; set; }
+    [Parameter] public string? counter { get; set; }
 
     [Parameter] public string? headerName { get; set; }
 

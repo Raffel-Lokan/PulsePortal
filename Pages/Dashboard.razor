@@ -12,24 +12,55 @@
     </div>
 </nav>
 
-<OverviewStat counter=@numberOfUsers headerName="Aantal gebruikers">
-    <childComponents>
-        @for (int i = 0; i < numberOfUsers; i++)
-        {
-            <span class='oi oi-person marginSmall' aria-hidden='true'></span>
-        }
-    </childComponents>
-</OverviewStat>
+<div class="overviewContainer">
+    <div>
+        <OverviewStat counter=@numberOfUsers headerName="Aantal gebruikers" isMainStat=true>
+            <childComponents>
+                @for (int i = 0; i < usersTotal; i++)
+                {
+                    <span class='oi oi-person marginSmall' aria-hidden='true'></span>
+                }
+            </childComponents>
+        </OverviewStat>
 
-<OverviewStat counter=@numberOfDevices headerName="Aantal toestellen" />
+        <OverviewStat counter=@numberOfDevices headerName="Aantal toestellen" isMainStat=true>
+            <childComponents>
+                @for (int i = 0; i < devicesTotal; i++)
+                {
+                    <span class='oi oi-phone marginSmall' aria-hidden='true'></span>
+                }
+            </childComponents>
+        </OverviewStat>
 
-<OverviewStat counter=@numberOfConferences headerName="Aantal conferenties" />
+        <OverviewStat counter=@numberOfConferences headerName="Aantal conferenties" isMainStat=true />
+    </div>
+    <div>
+        <OverviewStat counter="+31 76 820 0115" headerName="Algemeen nummer" />
 
+        <OverviewStat headerName="Conferentienummer" />
+
+        <OverviewStat headerName="Faxnummer" />
+
+        <OverviewStat counter=@numberOfNumbers headerName="Aantal nummers" isMainStat=true>
+            <childComponents>
+                <CircleGraph stats=@stats />
+            </childComponents>
+        </OverviewStat>
+    </div>
+</div>
 
 
 @code {
+
     private string accountName = "Cobbler kantoor";
-    private int numberOfUsers = 25;
-    private int numberOfDevices = 42;
-    private int numberOfConferences = 0;
+    private string numberOfUsers = "25";
+    private int usersTotal = 25;
+    private string numberOfDevices = "42";
+    private int devicesTotal = 42;
+    private string numberOfConferences = "0";
+    private string numberOfNumbers = "16";
+    private Stat[] stats = {
+new Stat("Toegewezen", 14),
+new Stat("Niet toegewezen", 2)
+};
 }

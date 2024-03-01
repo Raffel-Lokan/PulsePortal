@@ -19,6 +19,7 @@
 .navItem {
     border: 1px solid white;
     padding: 10px 20px;
+    cursor: pointer;
 }
 
 .navItemContainer {
@@ -27,4 +28,9 @@
 
 .marginSmall {
     margin: 0 2px;
+}
+
+.overviewContainer {
+    display: flex;
+    gap: 3rem;
 }

@@ -1,5 +1,13 @@
 .header {
     display: flex;
+    background-color: #f6f6f6;
+    justify-content: space-between;
+    padding: 15px 10px;
+    border-radius: 2px;
+}
+
+.mainStatHeader {
+    display: flex;
     font-size: larger;
     background-color: #f6f6f6;
     justify-content: space-between;
@@ -11,11 +19,15 @@
     color: #22a5ff;
 }
 
+.mainStat {
+    width: 20rem;
+}
+
 .overviewStat {
-    max-width: 20rem;
+    width: 20rem;
 }
 
 .childComponents {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 }
